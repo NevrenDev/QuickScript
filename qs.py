@@ -1,9 +1,11 @@
-from . import init, get_version
+from . import init, qsconfig
 import argparse
 
+# Checks if program doesn't finds an error
 if init() != 0:
     exit(1)
 
+# Arguments handler (makes that you can use ex. --version)
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--ver', action='store_true', help='Show QuickScript version')
@@ -12,40 +14,12 @@ parser.add_argument('--synt', action='store_true', help='Show QuickScript comman
 
 args = parser.parse_args()
 
-ver = get_version()
-
-crd = """QuickScript
-    Made by: NevrenDev
-"""
-
-syntaxes = """QuickScript Command Syntaxes
-    qs [--ver --credits --synt] -> Shows version, credits and command syntaxes
-    qs-create <script> -> Opens web-based creator for a new script
-    qs-run <script> [args] -> Runs a script with optional script arguments
-    qs-list -> Lists all available scripts
-    qs-update [--auto] -> Checks for updates or toggles auto-check on boot
-    qs-delete <script> -> Permamently deletes a script
-    """
-
+# Logic of arguments
 if args.ver:
-    string = "Installed QuickScript version: "+ver
-    print("--------------------------")
-    print(string)
-    print("--------------------------")
+    print(qsconfig.get().ver_str)
 elif args.credits:
-    print("--------------------------\n")
-    print(crd)
-    print("--------------------------")
+    print(qsconfig.get().credits)
 elif args.synt:
-    print("--------------------------\n")
-    print(syntaxes)
-    print("--------------------------")
+    print(qsconfig.get().syntaxes)
 else:
-    full = f"""QuickScript {ver}
-
-Made by: NevrenDev
-
-{syntaxes}"""
-    print("--------------------------\n")
-    print(full)
-    print("--------------------------")
+    print(qsconfig.get().full)
