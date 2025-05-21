@@ -8,7 +8,7 @@ if init() != 0:
 
 qss = list(qsscripts.glob('*.qsx'))
 
-if  qss:
+if not qss:
     qprint("There are no QuickScript Scripts at the moment.\nYou can create one using `qs-create`", "white on green")
 else:
     for file in qss:
