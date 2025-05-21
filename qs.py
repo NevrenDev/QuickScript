@@ -1,4 +1,4 @@
-from . import init, qsconfig
+from . import init, qsconfig, qprint
 import argparse
 
 # Checks if program doesn't finds an error
@@ -16,10 +16,10 @@ args = parser.parse_args()
 
 # Logic of arguments
 if args.ver:
-    print(qsconfig.get().ver_str)
+    qprint(qsconfig.get().ver_str)
 elif args.credits:
-    print(qsconfig.get().credits)
+    qprint(qsconfig.get().credits)
 elif args.synt:
-    print(qsconfig.get().syntaxes)
+    qprint(qsconfig.get().syntaxes)
 else:
-    print(qsconfig.get().full)
+    qprint(qsconfig.get().full)

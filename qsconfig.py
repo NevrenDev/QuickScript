@@ -2,7 +2,7 @@ from pathlib import Path
 from . import config_path
 
 # Variables to hold info for config file creation
-VERSION = '1.0'
+VERSION = 'dev-2'
 VER_STR = f"""--------------------------
 Installed QuickScript version: {VERSION}
 --------------------------"""
