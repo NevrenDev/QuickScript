@@ -66,7 +66,6 @@ def init():
         if cfg.read_text(encoding='utf-8') == "": qsconfig.create()
 
         ver = qsconfig.VERSION
-        print(qsconfig.VER_STR)
         if qsconfig.get().version != ver: qsconfig.create()
 
         logging.info("QuickScript initialized successfully.")
