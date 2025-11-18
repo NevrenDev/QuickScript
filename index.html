@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://nevrendev.github.io/style.css">
+    <link rel="shortcut icon" href="https://nevrendev.github.io/favicon.png" type="image/x-icon">
+    <title>QuickScript | NevrenDev</title>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="logo">&gt; <strong>NevrenDev</strong><button onclick="go('https:/\/nevrendev.github.io')" style="margin-left: 15px;">Home Page</button></div>
+            <div class="nav">
+                <button onclick="go('#intro')">About</button>
+                <button onclick="go('#progress')">Progress</button>
+            </div>
+            <div style="display:flex;gap:12px;align-items:center;">
+                <button class="theme-toggle" id="themeToggle" onclick="theme()">Theme: Light</button>
+            </div>
+        </header>
+        <main class="h-scroll" id="hScroll">
+            <section class="section intro" id="intro">
+                <div class="panel">
+                    <div id="introBox">
+                        <div class="avatar" aria-hidden="true">
+                            <div class="icon"></div>
+                        </div>
+                        <div>
+                            <div class="title">> QuickScript</div>
+                            <p style="opacity:0.9;margin-top:8px;">Multipurpose tool that allows to do multiple things with a single command line. <br>
+                            You can go to the repo <button onclick="go('https:/\/github.com/NevrenDev/QuickScript')">here</button></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section progress" id="progress">
+                <div class="panel">
+                    <h2>Progress and updates</h2>
+                    <hr>
+                    <h3>Progress</h3>
+                    <label>
+                        Paused Development
+                        <progress max="100" value="20"></progress>
+                    </label>
+                    <br><br>
+                    <h3>Updates (commits)</h3>
+                    <ul>21.05.2025 (21st May 2025)</ul>
+                    <li>Another debbuging line to change, silly me</li>
+                    <li>Forgot to delete debbuging line from __init__.py</li>
+                    <li>Made qs-list, added placeholder files and added coloring option for the text</li>
+                    <ul>18.04.2025 (18th April 2025)</ul>
+                    <li>Added config file to project and handler of config</li>
+                    <ul>17.04.2025 (17th April 2025)</ul>
+                    <li>Create project and initial files</li>
+                </div>
+            </section>
+        </main>
+
+        <footer title="and ChatGPT*">
+            © 2025 NevrenDev • built with 🧋 and pain
+        </footer>
+    </div>
+    <script src="https://nevrendev.github.io/script.js"></script>
+</body>
+</html>
